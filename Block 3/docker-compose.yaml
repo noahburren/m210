@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: my-html-nginx
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+    # Kopiere die HTML-Datei in den Container
+      - C:/Users/noahb/OneDrive - TBZ/Dokumente/ZLI/Modul 210/Block 3/index.html:/usr/share/nginx/html/index.html
+    restart: always
