@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vergleich Cloud-Anbieter</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef2f7;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #0056b3;
+        font-size: 2.5em;
+        text-transform: uppercase;
+      }
+      h2 {
+        color: #333;
+        font-size: 2em;
+        text-transform: uppercase;
+      }
+      p {
+        background: white;
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 650px;
+        border-radius: 8px;
+        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15);
+        font-size: 1.1em;
+        line-height: 1.5;
+      }
+      strong {
+        color: #0056b3;
+      }
+      .comparison-container {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+      }
+      .comparison-box {
+        background-color: white;
+        width: 30%;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+      }
+      table {
+        width: 100%;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #0056b3;
+        color: white;
+      }
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vergleich von Cloud-Anbietern</h1>
+
+    <div class="comparison-container">
+      <div class="comparison-box">
+        <h2>1. Amazon Web Services (AWS)</h2>
+        <p><strong>Wichtige Dienstleistungen:</strong></p>
+        <p>Speicherlösungen: S3, EBS, Glacier</p>
+        <p>Datenbanken: RDS, DynamoDB, Redshift</p>
+        <p>AI/ML-Services: SageMaker, Rekognition, Comprehend</p>
+        <p>Netzwerkdienste: VPC, Route 53, CloudFront</p>
+        <p>
+          <strong>Kostenstruktur:</strong> Pay-as-you-go, Rabatte für
+          langfristige Bindungen.
+        </p>
+        <p>
+          <strong>Skalierbarkeit:</strong> Sehr hoch, mit Auto Scaling und Load
+          Balancing.
+        </p>
+        <p>
+          <strong>Sicherheit:</strong> Verschlüsselung, IAM, DDoS-Schutz,
+          Compliance-Zertifikate.
+        </p>
+      </div>
+      <div class="comparison-box">
+        <h2>2. Microsoft Azure</h2>
+        <p><strong>Wichtige Dienstleistungen:</strong></p>
+        <p>Speicherlösungen: Blob Storage, Disk Storage, Azure Files</p>
+        <p>Datenbanken: Azure SQL, Cosmos DB, Synapse Analytics</p>
+        <p>AI/ML-Services: Azure ML, Cognitive Services</p>
+        <p>Netzwerkdienste: Virtual Network, Load Balancer, Azure CDN</p>
+        <p><strong>Kostenstruktur:</strong> Pay-as-you-go, Reserved Pricing.</p>
+        <p>
+          <strong>Skalierbarkeit:</strong> Hoch, mit Auto Scaling und Managed
+          Kubernetes.
+        </p>
+        <p>
+          <strong>Sicherheit:</strong> Azure Active Directory, Verschlüsselung,
+          DDoS-Schutz.
+        </p>
+      </div>
+      <div class="comparison-box">
+        <h2>3. Google Cloud</h2>
+        <p><strong>Wichtige Dienstleistungen:</strong></p>
+        <p>Speicherlösungen: Google Cloud Storage, Persistent Disks</p>
+        <p>Datenbanken: Cloud SQL, Bigtable, BigQuery</p>
+        <p>AI/ML-Services: Vertex AI, AutoML, TensorFlow</p>
+        <p>
+          Netzwerkdienste: Virtual Private Cloud, Cloud Load Balancing, Cloud
+          CDN
+        </p>
+        <p>
+          <strong>Kostenstruktur:</strong> Sehr wettbewerbsfähige Preise,
+          Rabatte für kontinuierliche Nutzung.
+        </p>
+        <p>
+          <strong>Skalierbarkeit:</strong> Exzellente Skalierbarkeit mit
+          Kubernetes und Autoscaling.
+        </p>
+        <p>
+          <strong>Sicherheit:</strong> Identity-Aware Proxy, Verschlüsselung,
+          DDoS-Schutz.
+        </p>
+      </div>
+    </div>
+
+    <h2>Vergleich der Cloud-Anbieter</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Kriterium</th>
+          <th>AWS</th>
+          <th>Azure</th>
+          <th>Google Cloud</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kostenstruktur</td>
+          <td>Pay-as-you-go, Rabatte für langfristige Bindungen</td>
+          <td>Pay-as-you-go, Reserved Pricing</td>
+          <td>Wettbewerbsfähige Preise, Rabatte für kontinuierliche Nutzung</td>
+        </tr>
+        <tr>
+          <td>Skalierbarkeit</td>
+          <td>Sehr hoch, mit Auto Scaling und Load Balancing</td>
+          <td>Hoch, mit Auto Scaling und Managed Kubernetes</td>
+          <td>Exzellente Skalierbarkeit mit Kubernetes und Autoscaling</td>
+        </tr>
+        <tr>
+          <td>Sicherheit</td>
+          <td>Verschlüsselung, IAM, DDoS-Schutz, Compliance-Zertifikate</td>
+          <td>Azure Active Directory, Verschlüsselung, DDoS-Schutz</td>
+          <td>Identity-Aware Proxy, Verschlüsselung, DDoS-Schutz</td>
+        </tr>
+        <tr>
+          <td>Verfügbarkeit</td>
+          <td>Globale Verfügbarkeit, viele Rechenzentren</td>
+          <td>Globale Verfügbarkeit, starke Microsoft-Integration</td>
+          <td>Globale Verfügbarkeit, stark in Datenanalyse und ML</td>
+        </tr>
+        <tr>
+          <td>Kundensupport</td>
+          <td>24/7 Support, Premium-Support verfügbar</td>
+          <td>24/7 Support, Supportpläne verfügbar</td>
+          <td>24/7 Support, Supportpläne verfügbar</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
