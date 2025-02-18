@@ -7,6 +7,6 @@ services:
     ports:
       - "8080:80"
     volumes:
-    # Kopiere die HTML-Datei in den Container
+    # Mounted die HTML-Datei in den Container (schreibrecht/ teilen)
       - C:/Users/noahb/OneDrive - TBZ/Dokumente/ZLI/Modul 210/Block 3:/usr/share/nginx/html
     restart: always
