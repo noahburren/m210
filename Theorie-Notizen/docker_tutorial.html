@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Docker-Container für HTML-Webseite</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+  </head>
+  <header>
+    <a href="index.html"><button>Cloud Computing</button></a>
+    <a href="index copy.html"><button>Cloud Anbieter</button></a>
+    <a href="index copy 2.html"
+      ><button>Container-Technologie und Virtualisierung</button></a
+    >
+    <a href="index copy 3.html"><button>Container-Orchestrierung</button></a>
+    <a href="docker_tutorial.html"><button>Docker Tutorial</button></a>
+  </header>
+  <body>
+    <div class="container">
+      <h1>Docker-Container für HTML-Webseite</h1>
+      <p>
+        In diesem Tutorial lernst du, wie du deine HTML-Webseite in einem Docker-Container mit Nginx hosten kannst. Wir verwenden das Nginx-Image von Docker Hub, um die Webseite bereitzustellen.
+      </p>
+
+      <h2>1. Docker für Windows installieren</h2>
+      <p>
+        Lade Docker Desktop für Windows herunter und installiere es: <a href="https://www.docker.com/products/docker-desktop" target="_blank">Docker Desktop for Windows</a><br />
+        Folge den Installationsanweisungen.<br />
+        Stelle sicher, dass Hyper-V aktiviert ist und starte den Rechner neu.<br />
+        Nach der Installation öffne Docker Desktop.
+      </p>
+
+      <h2>2. Erstelle das Projektverzeichnis</h2>
+      <p>
+        Erstelle ein neues Verzeichnis für dein Projekt:
+        <pre><code>C:\my-html-project</code></pre>
+      
+        Lege deine index.html-Datei in diesem Verzeichnis ab.
+      </p>
+
+      <h2>3. Dockerfile erstellen</h2>
+      <p>
+        Erstelle im Projektordner eine neue Datei namens <code>Dockerfile</code> (ohne Dateiendung). Der Inhalt dieser Datei sollte folgendermaßen aussehen:
+      </p>
+      <pre><code>FROM nginx:latest
+        COPY index.html /usr/share/nginx/html/index.html
+          EXPOSE 80</code></pre>
+
+      <h2>4. Docker-Befehle ausführen</h2>
+      <p>
+        Öffne die <strong>Eingabeaufforderung (cmd)</strong> oder <strong>PowerShell</strong> und navigiere zu deinem Projektordner:
+      </p>
+      <pre><code>cd C:\my-html-project</code></pre>
+
+      <h3>Docker-Image bauen</h3>
+      <p>Verwende den folgenden Befehl, um das Docker-Image zu bauen:</p>
+      <pre><code>docker build -t my-html-nginx .</code></pre>
+
+      <h3>Container starten</h3>
+      <p>Starte den Container mit folgendem Befehl:</p>
+      <pre><code>docker run -d -p 8080:80 my-html-nginx</code></pre>
+
+      <h2>5. Webseite im Browser anzeigen</h2>
+      <p>Öffne deinen Browser und gehe zu:</p>
+      <pre><code>http://localhost:8080</code></pre>
+      <p>
+        Du solltest nun deine HTML-Seite sehen, die vom Nginx-Container bereitgestellt wird.
+      </p>
+
+      <h2>6. Verwalten des Containers</h2>
+      <h3>Alle laufenden Container anzeigen</h3>
+      <p>Verwende diesen Befehl, um alle laufenden Container zu sehen:</p>
+      <pre><code>docker ps</code></pre>
+
+      <h3>Container stoppen</h3>
+      <p>Um einen Container zu stoppen, verwende:</p>
+      <pre><code>docker stop &lt;container-id&gt;</code></pre>
+      <p>
+        Ersetze <code>&lt;container-id&gt;</code> mit der tatsächlichen ID des Containers, die du durch <code>docker ps</code> finden kannst.
+      </p>
+
+      <h2>Optional: Direktes Mounten von Dateien</h2>
+      <p>
+        Falls du das <code>Dockerfile</code> nicht verwenden möchtest, kannst du auch das aktuelle Verzeichnis direkt in den Container mounten. Verwende diesen Befehl:
+      </p>
+      <pre><code>docker run -d -p 8080:80 -v C:\my-html-project:/usr/share/nginx/html nginx</code></pre>
+      <p>
+        Dadurch wird dein HTML-Verzeichnis direkt im Container verwendet und du musst das <code>Dockerfile</code> nicht mehr erstellen.
+      </p>
+
+      <h2>Fazit</h2>
+      <p>
+        Du hast jetzt erfolgreich eine HTML-Webseite in einem Docker-Container mit Nginx bereitgestellt! Du kannst den Container jederzeit stoppen oder neu starten und deine Webseite weiterhin über <code>http://localhost:8080</code> aufrufen.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container-Technologie und Virtualisierung</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #eef2f7;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        color: #0056b3;
+        font-size: 2.5em;
+        text-transform: uppercase;
+      }
+      h2 {
+        color: #333;
+        font-size: 1.8em;
+      }
+      p {
+        background: white;
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 650px;
+        border-radius: 8px;
+        box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15);
+        font-size: 1.1em;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <header>
+    <a href="index.html"><button>Cloud Computing</button></a>
+    <a href="index copy.html"><button>Cloud Anbieter</button></a>
+    <a href="index copy 2.html"
+      ><button>Container-Technologie und Virtualisierung</button></a
+    >
+    <a href="index copy 3.html"><button>Container-Orchestrierung</button></a>
+    <a href="docker_tutorial.html"><button>Docker Tutorial</button></a>
+  </header>
+  <body>
+    <h1>Container-Technologie und Virtualisierung</h1>
+    <h2>Was ist Container-Technologie oder Container-Virtualisierung?</h2>
+    <p>
+      Container-Technologie ermöglicht es, Software und ihre Abhängigkeiten in
+      isolierten Containern zu verpacken, die auf jedem System unabhängig vom
+      Betriebssystem laufen können. Sie sind leichtgewichtig und schnell.
+    </p>
+
+    <h2>
+      Vor- und Nachteile der Container-Technologie zu virtuellen Servern (VM)
+    </h2>
+    <p>
+      <strong>Vorteile:</strong><br />
+      - Leichtgewichtig und schneller als VMs.<br />
+      - Schnellere Bereitstellung und Skalierung.<br />
+      - Geringerer Overhead bei der Ressourcennutzung.<br />
+      <strong>Nachteile:</strong><br />
+      - Weniger Isolation im Vergleich zu VMs.<br />
+      - Abhängigkeit vom Host-Betriebssystem.
+    </p>
+
+    <h2>Produkte im Zusammenhang mit virtuellen Servern und Container</h2>
+    <p>
+      - Virtuelle Server: VMware, Hyper-V, VirtualBox.<br />
+      - Container: Docker, Kubernetes, Podman.
+    </p>
+
+    <h2>Unterschiede zwischen VM und Container</h2>
+    <p>
+      - <strong>Bereitstellung:</strong> VMs benötigen mehr Zeit für die
+      Bereitstellung, Container sind schneller.<br />
+      - <strong>Speicherplatz:</strong> VMs benötigen mehr Speicherplatz, da
+      jedes VM ein eigenes Betriebssystem benötigt, während Container nur die
+      notwendigen Libraries und Binärdateien enthalten.<br />
+      - <strong>Portabilität:</strong> Container sind portabler, da sie auf
+      jeder Plattform laufen können, die Docker unterstützt.<br />
+      - <strong>Effizienz:</strong> Container sind ressourceneffizienter.<br />
+      - <strong>Betriebssystem (Kernel):</strong> VMs haben ein eigenes
+      Betriebssystem, während Container den Kernel des Host-Betriebssystems
+      teilen.
+    </p>
+
+    <h2>Können virtuelle Server immer durch Container ersetzt werden?</h2>
+    <p>
+      Nein, Container sind nicht immer geeignet für Anwendungen, die
+      vollständige Isolation oder eine vollständige Virtualisierung des
+      Betriebssystems erfordern. VMs bieten eine stärkere Isolation.
+    </p>
+
+    <h2>Unterschied zwischen Self-Managed und Fully Managed</h2>
+    <p>
+      - <strong>Self-Managed:</strong> Der Nutzer ist für die Verwaltung der
+      Infrastruktur verantwortlich, einschließlich Installation, Updates und
+      Wartung.<br />
+      - <strong>Fully Managed:</strong> Der Anbieter übernimmt die vollständige
+      Verwaltung der Infrastruktur, einschließlich Updates, Sicherheit und
+      Fehlerbehebung.
+    </p>
+  </body>
+</html>
